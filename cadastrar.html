@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastrar Cliente | Cine Atlântida</title>
+
+    <link rel="stylesheet" href="cadastrar.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-film"></i>
+
+            <span>CINE <strong>Atlântida</strong></span>
+
+        </div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="consultaFilme.html">Filmes</a>
+
+            <a href="cadastrar.html" class="ativo">Cadastrar Cliente</a>
+
+            <a href="listar.html">Consultar Clientes</a>
+
+        </nav>
+
+        <div class="usuario">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <i class="fa-regular fa-circle-user"></i>
+
+        </div>
+
+    </header>
+
+    <section class="banner">
+
+        <div class="overlay"></div>
+
+        <div class="texto-banner">
+
+            <p class="caminho">
+
+                <i class="fa-solid fa-house"></i>
+
+                / Clientes / Cadastro
+
+            </p>
+
+            <h1>Cadastrar Cliente</h1>
+
+            <p>
+
+                Preencha os dados abaixo para cadastrar
+                um novo cliente no sistema.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <main class="container">
+
+        <form id="formCadastro" class="formulario">
+
+            <div class="grupo">
+
+                <label for="nome">Nome do Cliente</label>
+
+                <input type="text" id="nome" required>
+
+            </div>
+
+            <div class="grupo">
+
+                <label for="email">E-mail</label>
+
+                <input type="email" id="email" required>
+
+            </div>
+
+            <div class="grupo">
+
+                <label for="telefone">Telefone</label>
+
+                <input type="text" id="telefone" required>
+
+            </div>
+
+            <button type="submit" class="salvar">
+
+                <i class="fa-solid fa-floppy-disk"></i>
+
+                Salvar Cliente
+
+            </button>
+
+        </form>
+
+    </main>
+
+    <footer>
+
+        <div class="footer-logo">
+
+            <i class="fa-solid fa-film"></i>
+
+            <h2>CINE <span>Atlântida</span></h2>
+
+        </div>
+
+        <p>
+
+            © 2026 Cine Atlântida Web
+
+        </p>
+
+    </footer>
+
+    <script src="banco.js"></script>
+
+    <script>
+
+        document.getElementById('formCadastro').addEventListener('submit', function (e) {
+
+            e.preventDefault();
+
+            const lista = obterDados();
+
+            const novoCliente = {
+
+                id: Date.now(),
+
+                nome: document.getElementById('nome').value,
+
+                email: document.getElementById('email').value,
+
+                telefone: document.getElementById('telefone').value
+
+            };
+
+            lista.push(novoCliente);
+
+            salvarDados(lista);
+
+            alert("Cliente cadastrado com sucesso!");
+
+            window.location.href = "listar.html";
+
+        });
+
+    </script>
+
+</body>
+
+</html>

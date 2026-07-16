@@ -1,0 +1,397 @@
+/*==========================
+        RESET
+==========================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+
+    background: #0b0b0b;
+    color: #fff;
+
+}
+
+/*==========================
+        NAVBAR
+==========================*/
+
+header {
+
+    width: 100%;
+    height: 80px;
+
+    background: #050505;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 70px;
+
+    border-bottom: 1px solid #222;
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+}
+
+.logo {
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 30px;
+
+}
+
+.logo i,
+.logo strong {
+
+    color: #d60d18;
+
+}
+
+nav {
+
+    display: flex;
+    gap: 40px;
+
+}
+
+nav a {
+
+    color: white;
+    text-decoration: none;
+    padding: 28px 0;
+    border-bottom: 3px solid transparent;
+    transition: .3s;
+
+}
+
+nav a:hover,
+nav .ativo {
+
+    color: #d60d18;
+    border-color: #d60d18;
+
+}
+
+.usuario {
+
+    display: flex;
+    gap: 25px;
+    font-size: 24px;
+
+}
+
+.usuario i {
+
+    cursor: pointer;
+
+}
+
+.usuario i:hover {
+
+    color: #d60d18;
+
+}
+
+/*==========================
+        BANNER
+==========================*/
+
+.banner {
+
+    height: 280px;
+
+    background: url("assets/hero.jpeg") center/cover;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 80px;
+
+}
+
+.overlay {
+
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .72);
+
+}
+
+.texto-banner {
+
+    position: relative;
+    z-index: 2;
+    max-width: 650px;
+
+}
+
+.caminho {
+
+    color: #d60d18;
+    margin-bottom: 15px;
+
+}
+
+.texto-banner h1 {
+
+    font-size: 50px;
+    margin-bottom: 15px;
+
+}
+
+.texto-banner p {
+
+    color: #d5d5d5;
+    line-height: 1.7;
+
+}
+
+/*==========================
+      FORMULÁRIO
+==========================*/
+
+.container {
+
+    width: 90%;
+    max-width: 700px;
+
+    margin: -50px auto 80px;
+
+    position: relative;
+    z-index: 10;
+
+}
+
+.formulario {
+
+    background: #181818;
+
+    border: 1px solid #2d2d2d;
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .4);
+
+}
+
+.grupo {
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 25px;
+
+}
+
+.grupo label {
+
+    margin-bottom: 8px;
+    font-weight: 600;
+
+}
+
+.grupo input {
+
+    background: #111;
+    color: #bdbdbd;
+
+    border: 1px solid #333;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    font-size: 15px;
+
+}
+
+.grupo input:disabled {
+
+    cursor: not-allowed;
+
+    opacity: .8;
+
+}
+
+/*==========================
+        BOTÃO
+==========================*/
+
+.excluir {
+
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #d60d18;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.excluir:hover {
+
+    background: #a30000;
+
+}
+
+.excluir i {
+
+    margin-right: 8px;
+
+}
+
+/*==========================
+        RODAPÉ
+==========================*/
+
+footer {
+
+    background: #050505;
+
+    border-top: 1px solid #222;
+
+    text-align: center;
+
+    padding: 40px;
+
+    margin-top: 80px;
+
+}
+
+.footer-logo {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+
+}
+
+.footer-logo i {
+
+    color: #d60d18;
+
+    font-size: 34px;
+
+}
+
+.footer-logo h2 {
+
+    font-size: 30px;
+
+}
+
+.footer-logo span {
+
+    color: #d60d18;
+
+}
+
+footer p {
+
+    color: #bdbdbd;
+
+}
+
+/*==========================
+    RESPONSIVIDADE
+==========================*/
+
+@media(max-width:900px) {
+
+    header {
+
+        flex-direction: column;
+
+        height: auto;
+
+        padding: 20px;
+
+        gap: 20px;
+
+    }
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 20px;
+
+    }
+
+    .banner {
+
+        height: 220px;
+
+        padding: 30px;
+
+    }
+
+    .texto-banner h1 {
+
+        font-size: 38px;
+
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .container {
+
+        width: 95%;
+
+    }
+
+    .formulario {
+
+        padding: 25px;
+
+    }
+
+    .logo {
+
+        font-size: 22px;
+
+    }
+
+    .usuario {
+
+        font-size: 20px;
+
+    }
+
+}

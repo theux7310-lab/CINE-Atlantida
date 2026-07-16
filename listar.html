@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Consultar Clientes | Cine Atlântida</title>
+
+    <link rel="stylesheet" href="listar.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-film"></i>
+
+            <span>CINE <strong>Atlântida</strong></span>
+
+        </div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="consultaFilme.html">Filmes</a>
+
+            <a href="cadastrar.html">Cadastrar Cliente</a>
+
+            <a href="listar.html" class="ativo">Consultar Clientes</a>
+
+        </nav>
+
+        <div class="usuario">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <i class="fa-regular fa-circle-user"></i>
+
+        </div>
+
+    </header>
+
+    <section class="banner">
+
+        <div class="overlay"></div>
+
+        <div class="texto-banner">
+
+            <p class="caminho">
+
+                <i class="fa-solid fa-house"></i>
+
+                / Clientes / Consulta
+
+            </p>
+
+            <h1>Clientes Cadastrados</h1>
+
+            <p>
+
+                Consulte, edite ou exclua os clientes cadastrados
+                no sistema.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <main class="container">
+
+        <div class="pesquisa">
+
+            <input type="text" id="buscar" placeholder="Pesquisar cliente...">
+
+            <button>
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                Buscar
+
+            </button>
+
+        </div>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>ID</th>
+
+                    <th>Nome</th>
+
+                    <th>E-mail</th>
+
+                    <th>Telefone</th>
+
+                    <th>Ações</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="tabelaClientes">
+
+                        </tbody>
+                        
+                        </table>
+                        
+                        </main>
+                        
+                        <footer>
+                        
+                            <div class="footer-logo">
+                        
+                                <i class="fa-solid fa-film"></i>
+                        
+                                <h2>CINE <span>Atlântida</span></h2>
+                        
+                            </div>
+                        
+                            <p>
+                        
+                                © 2026 Cine Atlântida Web
+                        
+                            </p>
+                        
+                        </footer>
+                        
+                        <script src="banco.js"></script>
+                        
+                        <script>
+
+                            const lista = obterDados();
+
+                            const tbody = document.getElementById("tabelaClientes");
+
+                            if (lista.length === 0) {
+
+                                tbody.innerHTML = `
+                        
+                                <tr>
+                        
+                                    <td colspan="5" class="vazio">
+                        
+                                        Nenhum cliente cadastrado.
+                        
+                                    </td>
+                        
+                                </tr>
+                        
+                            `;
+
+                            } else {
+
+                                lista.forEach(cliente => {
+
+                                    const tr = document.createElement("tr");
+
+                                    tr.innerHTML = `
+                        
+                                    <td>${cliente.id}</td>
+                        
+                                    <td>${cliente.nome}</td>
+                        
+                                    <td>${cliente.email}</td>
+                        
+                                    <td>${cliente.telefone}</td>
+                        
+                                    <td class="acoes">
+                        
+                                        <a href="editar.html?id=${cliente.id}" class="editar">
+                        
+                                            <i class="fa-solid fa-pen"></i>
+                        
+                                            Editar
+                        
+                                        </a>
+                        
+                                        <a href="excluir.html?id=${cliente.id}" class="excluir">
+                        
+                                            <i class="fa-solid fa-trash"></i>
+                        
+                                            Excluir
+                        
+                                        </a>
+                        
+                                    </td>
+                        
+                                `;
+
+                                    tbody.appendChild(tr);
+
+                                });
+
+                            }
+
+                            document.getElementById("buscar").addEventListener("keyup", function () {
+
+                                const filtro = this.value.toLowerCase();
+
+                                const linhas = tbody.getElementsByTagName("tr");
+
+                                for (let linha of linhas) {
+
+                                    const texto = linha.textContent.toLowerCase();
+
+                                    linha.style.display = texto.includes(filtro) ? "" : "none";
+
+                                }
+
+                            });
+
+                        </script>
+                        
+                        </body>
+                        
+                        </html>

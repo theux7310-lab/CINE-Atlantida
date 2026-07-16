@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastrar Filme | Cine Atlântida</title>
+
+    <link rel="stylesheet" href="editarFilme.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>  
+
+    <header>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-film"></i>
+
+            <span>CINE <strong>Atlântida</strong></span>
+
+        </div>
+
+        <nav>
+
+           <a href="index.html">Home</a>
+            <a href="#" class="ativo">Filmes</a>
+            <a href="cadastrar.html">Cadastrar Cliente</a>
+            <a href="listar.html">Consultar Cliente</a>
+
+        </nav>
+
+        <div class="usuario">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-circle-user"></i>
+
+        </div>
+
+    </header>
+
+    <section class="banner">
+
+        <div class="overlay"></div>
+
+        <div class="texto-banner">
+
+            <p class="caminho">
+                <i class="fa-solid fa-house"></i>
+                / Filmes / Novo Filme
+            </p>
+
+            <h1>Cadastrar Filme</h1>
+
+            <p>
+                Cadastre um novo filme no sistema.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <main class="container">
+
+        <form class="formulario">
+
+            <div class="poster">
+
+                <img src="garfield.jpg" alt="Poster">
+
+                <button type="button">
+                    <i class="fa-solid fa-image"></i>
+                    Adicionar Poster
+                </button>
+
+            </div>
+
+            <div class="campos">
+
+                <div class="grupo">
+
+                    <label>Título</label>
+
+                    <input type="text" placeholder="Título do filme">
+
+                </div>
+
+                <div class="linha">
+
+                    <div class="grupo">
+
+                 <label for="genero">Gênero</label>
+         <select id="genero" name="genero" required>
+
+                   <option value="" disabled selected hidden>Selecione um gênero...</option>
+                   <option value="ficcao">Ficção Científica</option>
+                   <option value="comedia">Comédia</option>
+                   <option value="drama">Drama</option>
+                   <option value="terror">Terror</option>
+                   <option value="infantil">Infantil</option>
+         </select>
+
+                    </div>
+
+                    <div class="grupo">
+
+                        <label>Duração</label>
+
+                        <input type="text" placeholder="Insira o tempo de duração do filme">
+
+                    </div>
+
+                </div>
+
+                <div class="linha">
+
+                    <div class="grupo">
+
+                        <label for="classificacao">Classificação</label>
+         <select id="classificacao" name="classificacao" required>
+
+                   <option value="" disabled selected hidden>Selecione uma faixa etária...</option>
+                   <option value="livre">Livre</option>
+                   <option value="10 anos">10 anos</option>
+                   <option value="12 anos">12 anos</option>
+                   <option value="14 anos">14 anos</option>
+                   <option value="16 anos">16 anos</option>
+                   <option value="18 anos">18 anos</option>
+         </select>
+
+                    </div>
+
+                    <div class="grupo">
+
+                        <label>Data de Estreia</label>
+
+                        <input type="text" placeholder="dd/mm/aaaa">
+
+                    </div>
+
+                </div>
+
+                                <div class="linha">
+                                
+                                    <div class="grupo">
+                                
+                                        <label>Diretor</label>
+                                
+                                        <input type="text" placeholder="Insira o nome do diretor do filme">
+                                
+                                    </div>
+                                
+                                    <div class="grupo">
+                                
+                                        <label>Idioma</label>
+                                
+                                        <input type="text" placeholder="Insira o idioma original do filme">
+                                
+                                    </div>
+                                
+                                </div>
+                                
+                                <div class="grupo">
+                                
+                                    <label>Sinopse</label>
+                                
+                                    <textarea rows="7" placeholder="Insira a sinopse do filme"></textarea>
+                                
+                                </div>
+                                
+                                <div class="botoes">
+                                
+                                    <button type="reset" class="cancelar">
+                                
+                                        <i class="fa-solid fa-xmark"></i>
+                                
+                                        Cancelar
+                                
+                                    </button>
+                                
+                                    <button type="submit" class="salvar">
+                                
+                                        <i class="fa-solid fa-floppy-disk"></i>
+                                
+                                        Salvar Filme no Sistema
+                                
+                                    </button>
+                                
+                                </div>
+                                
+                                </div>
+                                
+                                </form>
+                                
+                                </main>
+                                
+                                <footer>
+                                
+                                    <div class="footer-logo">
+                                
+                                        <i class="fa-solid fa-film"></i>
+                                
+                                        <h2>CINE <span>Atlântida</span></h2>
+                                
+                                    </div>
+                                
+                                    <p>
+                                        © 2026 Cine Atlântida — Sistema de Gerenciamento de Filmes.
+                                    </p>
+                                
+                                </footer>
+                                
+                                </body>
+                                
+                                </html>

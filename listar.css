@@ -1,0 +1,528 @@
+/*==========================
+        RESET
+==========================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0b0b0b;
+    color: #fff;
+}
+
+/*==========================
+        NAVBAR
+==========================*/
+
+header {
+
+    width: 100%;
+    height: 80px;
+
+    background: #050505;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 70px;
+
+    border-bottom: 1px solid #222;
+
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+}
+
+.logo {
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-size: 30px;
+
+}
+
+.logo i,
+.logo strong {
+
+    color: #d60d18;
+
+}
+
+nav {
+
+    display: flex;
+    gap: 40px;
+
+}
+
+nav a {
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 28px 0;
+
+    border-bottom: 3px solid transparent;
+
+    transition: .3s;
+
+}
+
+nav a:hover,
+nav .ativo {
+
+    color: #d60d18;
+
+    border-color: #d60d18;
+
+}
+
+.usuario {
+
+    display: flex;
+
+    gap: 25px;
+
+    font-size: 24px;
+
+}
+
+.usuario i:hover {
+
+    color: #d60d18;
+
+    cursor: pointer;
+
+}
+
+/*==========================
+        BANNER
+==========================*/
+
+.banner {
+
+    height: 280px;
+
+    background: url("assets/hero.jpeg") center/cover;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding-left: 80px;
+
+}
+
+.overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, .72);
+
+}
+
+.texto-banner {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+.caminho {
+
+    color: #d60d18;
+
+    margin-bottom: 15px;
+
+}
+
+.texto-banner h1 {
+
+    font-size: 50px;
+
+    margin-bottom: 15px;
+
+}
+
+.texto-banner p {
+
+    color: #d5d5d5;
+
+}
+
+/*==========================
+      CONTAINER
+==========================*/
+
+.container {
+
+    width: 92%;
+
+    max-width: 1250px;
+
+    margin: -50px auto 70px;
+
+    position: relative;
+
+    z-index: 10;
+
+}
+
+/*==========================
+      PESQUISA
+==========================*/
+
+.pesquisa {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 30px;
+
+}
+
+.pesquisa input {
+
+    flex: 1;
+
+    padding: 15px;
+
+    background: #181818;
+
+    border: 1px solid #333;
+
+    border-radius: 10px;
+
+    color: white;
+
+    outline: none;
+
+    font-size: 15px;
+
+}
+
+.pesquisa input:focus {
+
+    border-color: #d60d18;
+
+}
+
+.pesquisa button {
+
+    background: #d60d18;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: 15px 30px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+.pesquisa button:hover {
+
+    background: #b30b14;
+
+}
+
+/*==========================
+        TABELA
+==========================*/
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background: #181818;
+
+}
+
+thead {
+
+    background: #d60d18;
+
+}
+
+thead th {
+
+    padding: 18px;
+
+    text-align: left;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+}
+
+tbody td {
+
+    padding: 18px;
+
+    border-bottom: 1px solid #2c2c2c;
+
+    color: #ddd;
+
+}
+
+tbody tr {
+
+    transition: .3s;
+
+}
+
+tbody tr:hover {
+
+    background: #232323;
+
+}
+
+/*==========================
+        AÇÕES
+==========================*/
+
+.acoes {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+.editar,
+.excluir {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    text-decoration: none;
+
+    color: white;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+.editar {
+
+    background: #f0ad4e;
+
+}
+
+.editar:hover {
+
+    background: #d8952d;
+
+}
+
+.excluir {
+
+    background: #d60d18;
+
+}
+
+.excluir:hover {
+
+    background: #b30b14;
+
+}
+
+.vazio {
+
+    text-align: center;
+
+    padding: 35px;
+
+    color: #bdbdbd;
+
+    font-size: 16px;
+
+}
+
+/*==========================
+        RODAPÉ
+==========================*/
+
+footer {
+
+    background: #050505;
+
+    border-top: 1px solid #222;
+
+    text-align: center;
+
+    padding: 40px;
+
+}
+
+.footer-logo {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+
+}
+
+.footer-logo i {
+
+    color: #d60d18;
+
+    font-size: 34px;
+
+}
+
+.footer-logo h2 {
+
+    font-size: 30px;
+
+}
+
+.footer-logo span {
+
+    color: #d60d18;
+
+}
+
+footer p {
+
+    color: #bdbdbd;
+
+}
+
+/*==========================
+    RESPONSIVIDADE
+==========================*/
+
+@media(max-width:900px) {
+
+    header {
+
+        flex-direction: column;
+
+        height: auto;
+
+        padding: 20px;
+
+        gap: 20px;
+
+    }
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 20px;
+
+    }
+
+    .banner {
+
+        height: 220px;
+
+        padding: 30px;
+
+    }
+
+    .texto-banner h1 {
+
+        font-size: 36px;
+
+    }
+
+    .pesquisa {
+
+        flex-direction: column;
+
+    }
+
+    table {
+
+        display: block;
+
+        overflow-x: auto;
+
+    }
+
+}
+
+@media(max-width:600px) {
+
+    .logo {
+
+        font-size: 22px;
+
+    }
+
+    .usuario {
+
+        font-size: 20px;
+
+    }
+
+    .container {
+
+        width: 95%;
+
+    }
+
+    .acoes {
+
+        flex-direction: column;
+
+    }
+
+    .editar,
+    .excluir {
+
+        justify-content: center;
+
+    }
+
+}

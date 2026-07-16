@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Filmes | Cine Atlântida</title>
+
+    <link rel="stylesheet" href="consultaFilme.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header>
+
+        <div class="logo">
+            <i class="fa-solid fa-film"></i>
+            <span>CINE <strong>Atlântida</strong></span>
+        </div>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+            <a href="#" class="ativo">Filmes</a>
+            <a href="cadastrar.html">Cadastrar Cliente</a>
+            <a href="listar.html">Consultar Cliente</a>
+            
+
+        </nav>
+
+        <div class="usuario">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <i class="fa-regular fa-circle-user"></i>
+
+        </div>
+
+    </header>
+
+    <!-- ================= BANNER ================= -->
+
+    <section class="banner">
+
+        <div class="overlay"></div>
+
+        <div class="texto-banner">
+
+            <p class="caminho">
+                <i class="fa-solid fa-house"></i>
+                / Filmes
+            </p>
+
+            <h1>Consulta de Filmes</h1>
+
+            <p>
+                Gerencie todos os filmes cadastrados no sistema.
+                Pesquise, edite, visualize ou exclua registros.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FILTROS ================= -->
+
+    <section class="filtros">
+
+        <input type="text" placeholder="Pesquisar filme...">
+
+        <select>
+            <option>Todas as categorias</option>
+            <option>Ação</option>
+            <option>Comédia</option>
+            <option>Drama</option>
+            <option>Terror</option>
+            <option>Animação</option>
+        </select>
+
+        <select>
+            <option>Classificação</option>
+            <option>Livre</option>
+            <option>10 anos</option>
+            <option>12 anos</option>
+            <option>14 anos</option>
+            <option>16 anos</option>
+            <option>18 anos</option>
+        </select>
+
+       <div class="botoes">
+                <a href="cadastrarFilme.html" class="btn-principal">
+                    Novo Filme
+                </a>
+            </div>
+
+    </section>
+
+    <!-- ================= LISTA ================= -->
+
+    <main class="catalogo">
+
+                <div class="card">
+                
+                    <img src="garfield.jpg" alt="Garfield">
+                
+                    <div class="info">
+                
+                        <h3>Garfield: Fora de casa</h3>
+                
+                        <p>Infantil/Comédia • 1h41min</p>
+                
+                        <span class="nota">
+                            <i class="fa-solid fa-star"></i> 8.6
+                        </span>
+                
+                        <div class="acoes">
+                
+                            <button class="detalhes">
+                                <i class="fa-solid fa-eye"></i>
+                                Detalhes
+                            </button>
+                
+                           <button> <a href="editar.html" class="editar">
+                                <i class="fa-solid fa-pen"></i>
+                                Editar
+                            </a>
+                            </button>
+                
+                            <button class="excluir">
+                                <i class="fa-solid fa-trash"></i>
+                                Excluir
+                            </button>
+                
+                        </div>
+                
+                    </div>
+                
+                </div>
+                
+                <div class="card">
+                
+                    <img src="Deadpool&Wolverine.jpg" alt="Deadpool">
+                
+                    <div class="info">
+                
+                        <h3>Deadpool & Wolverine</h3>
+                
+                        <p>Ação/Comédia • 2h08min</p>
+                
+                        <span class="nota">
+                            <i class="fa-solid fa-star"></i> 8.8
+                        </span>
+                
+                        <div class="acoes">
+                
+                            <button class="detalhes">
+                                <i class="fa-solid fa-eye"></i>
+                                Detalhes
+                            </button>
+                
+                            <button class="editar">
+                                <i class="fa-solid fa-pen"></i>
+                                Editar
+                            </button>
+                
+                            <button class="excluir">
+                                <i class="fa-solid fa-trash"></i>
+                                Excluir
+                            </button>
+                
+                        </div>
+                
+                    </div>
+                
+                </div>
+                
+                <div class="card">
+                
+                    <img src="  divertidamente2.jpg" alt="Divertida Mente">
+                
+                    <div class="info">
+                
+                        <h3>Divertida Mente 2</h3>
+                
+                        <p>Animação • 1h36min</p>
+                
+                        <span class="nota">
+                            <i class="fa-solid fa-star"></i> 8.9
+                        </span>
+                
+                        <div class="acoes">
+                
+                            <button class="detalhes">
+                                <i class="fa-solid fa-eye"></i>
+                                Detalhes
+                            </button>
+                
+                            <button class="editar">
+                                <i class="fa-solid fa-pen"></i>
+                                Editar
+                            </button>
+                
+                            <button class="excluir">
+                                <i class="fa-solid fa-trash"></i>
+                                Excluir
+                            </button>
+                
+                        </div>
+                
+                    </div>
+                
+                </div>
+                
+                <div class="card">
+                
+                    <img src="duna.jpg" alt="Duna">
+                
+                    <div class="info">
+                
+                        <h3>Duna: Parte Dois</h3>
+                
+                        <p>Ficção Científica • 2h46min</p>
+                
+                        <span class="nota">
+                            <i class="fa-solid fa-star"></i> 8.7
+                        </span>
+                
+                        <div class="acoes">
+                
+                            <button class="detalhes">
+                                <i class="fa-solid fa-eye"></i>
+                                Detalhes
+                            </button>
+                
+                        <button class="editar">
+                            <i class="fa-solid fa-pen"></i>
+                            Editar
+                        </button>
+                
+                            <button class="excluir">
+                                <i class="fa-solid fa-trash"></i>
+                                Excluir
+                            </button>
+                
+                        </div>
+                
+                    </div>
+                
+                </div>
+                
+                </main>
+                
+                <!-- ================= RODAPÉ ================= -->
+                
+                <footer>
+                
+                    <div class="footer-logo">
+                
+                        <i class="fa-solid fa-film"></i>
+                
+                        <h2>CINE <span>Atlântida</span></h2>
+                
+                    </div>
+                
+                    <p>
+                        © 2026 Cine Atlântida — Sistema de Gerenciamento de Filmes.
+                    </p>
+                
+                </footer>
+                
+                </body>
+                
+                </html>
